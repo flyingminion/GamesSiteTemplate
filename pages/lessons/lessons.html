@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Brought to you by DevinDaboiCorporation-->
 <html>
     <head>
         <title>Learn Calculus</title>
@@ -16,21 +17,23 @@
             }
             img {
                 width: 7.6vw;
-                height: 15vh;
+                height: 7.6vw;
                 border-radius: 10%;
                 top: 0;
                 margin-top: 0;
                 margin-bottom: 1vh;
+                object-fit: cover;
             }
+
             button {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
                 width: 7.6vw;
-                height: 20vh;
+                height: auto;
                 font-size: 60%;
-                padding: 0;
+                padding: 0 0 0.5vw 0;
                 border-radius: 15px;
             }
             #gamesearchform {
@@ -155,8 +158,6 @@
             <p id="no-results">No results...</p>
         </div>
     </body>
-    <script src="../../js/typeanimation.js"></script>
-    <script src="../../js/masking.js"></script>
     <script>
         const searchInput = document.getElementById('gamesearchinput');
         const grid = document.getElementById('gamesgrid');
@@ -178,14 +179,6 @@
 
             noResults.style.display = visibleCount == 0 ? 'block' : 'none';
         });
-
-        // function openGame(url) {
-        //     url = "pages/lessons/" + url;
-        //     window.parent.postMessage({
-        //         type: 'gamenav',
-        //         url: url
-        //     }, '*');
-        // }
         function openGame(url) {
             const win = window.open();
             win.document.open();
